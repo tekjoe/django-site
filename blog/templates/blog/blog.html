@@ -1,0 +1,22 @@
+{% extends "personal/base.html" %}
+{% load staticfiles %}
+
+{% block title_block %}
+Blog
+{% endblock %}
+{% block body_block %}
+    <div class="row">
+    {% for post in posts %}
+      <div class="col-sm-4">
+            <div class="card">
+                <img class="card-img-top" src="{% static 'img/thumbnail.svg' %}" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">{{post.title}}</h5>
+                    <p class="card-text">Posted on {{ post.date|date:"Y-m-d" }}</p>
+                    <a href="/blog/{{post.id}}" class="btn btn-primary">Read more</a>
+                </div>
+            </div>
+      </div>
+    {% endfor %}
+    </div>
+{% endblock %}
