@@ -1,14 +1,18 @@
 {% load staticfiles %}
 
 {% block content %}
-<section class="jumbotron text-center">
-  <div class="container">
-    <h1 class="jumbotron-heading">Welcome to tekjoe.org</h1>
-    <p class="lead text-muted">Building a better tomorrow.</p>
-    <p>
-      <a href="#" class="btn btn-primary my-2">Main call to action</a>
-      <a href="#" class="btn btn-secondary my-2">Secondary action</a>
-    </p>
-  </div>
-</section>
+
+<div class="jumbotron jumbotron-fluid text-center" style="background-image:url({% static "img/background.png" %}); background-size:cover">
+    <div class="container">
+        <h1 class="display-1" style="color: white;">Joe Ramirez</h1>
+        <h2 style="color: white;">Technology Enthusiast</h2>
+        <p style="color: white;">Welcome to my digital portfolio. This is where I will showcase all of the projects that I am currently working on. </p>
+        <p>
+          <a href="https://www.github.com/tekjoe" class="btn btn-lg btn-outline-secondary" target="_blank"><i class="fab fa-github"></i> GITHUB</a>
+          <a href="https://www.instagram.com/tekjoe" class="btn btn-lg btn-outline-warning" target="_blank"><i class="fab fa-instagram"></i> INSTAGRAM</a>
+          <a href="{% static "Joseph-Ramirez-Resume-2018.pdf"%}" class="btn btn-lg btn-outline-danger" target="_blank"><i class="far fa-file-alt"></i> CV</a>
+        </p>
+    </div>
+</div>
+
 {% endblock %}

@@ -5,35 +5,39 @@
 
 {% block body_block %}
     {% include "personal/includes/jumbotron.html" %}
+    <div class="container">
         <h1>This website is made with Django.</h1>
-    {% include "personal/includes/htmlsnippet.html" %}
-    <div class="row">
-      <div class="col-sm-4">
-        <div class="card text-center">
-          <div class="card-body">
-            <h5 class="card-title">Check out my 🅱️log.</h5>
-            <p class="card-text">It's a work in progress.</p>
-            <a href="{% url 'blog' %}" class="btn btn-primary">Read it</a>
+        {% include "personal/includes/htmlsnippet.html" %}
+    </div>
+    <div class="container">
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="card text-center">
+              <div class="card-body">
+                <h5 class="card-title">Check out my blog.</h5>
+                <p class="card-text">It's a work in progress.</p>
+                <a href="{% url 'blog' %}" class="btn btn-primary">Read it</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4 text-center">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Get in touch.</h5>
+                <p class="card-text">Have a question? Send me an email.</p>
+                <a href="{% url 'contact' %}" class="btn btn-primary">Contact me</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4 text-center">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Applied memetics.</h5>
+                <p class="card-text">Don't let your memes stay dreams.</p>
+                <a href="#" class="btn btn-primary">Schedule now</a>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="col-sm-4 text-center">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Get in touch.</h5>
-            <p class="card-text">Have a question? Send me an email.</p>
-            <a href="{% url 'contact' %}" class="btn btn-primary">Contact me</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-4 text-center">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Applied memetics.</h5>
-            <p class="card-text">Don't let your memes stay dreams.</p>
-            <a href="#" class="btn btn-primary">Schedule today</a>
-          </div>
-        </div>
-      </div>
     </div>
 {% endblock %}
